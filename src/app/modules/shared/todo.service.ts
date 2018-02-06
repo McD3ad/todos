@@ -5,17 +5,20 @@ export class Todo {
   id: number;
 
   constructor(
-    private title: string,
-    private completed: boolean
+    public title: string,
+    public completed: boolean
   ) { }
 }
 
-@Injectable()
+// @Injectable()
 export class TodoService {
-  constructor(private todos: Todo[]) { }
+  todos: Todo[];
+  constructor() {
+    this.todos = todos;
+  }
 
   getTodos() {
-    return todos;
+    return this.todos;
   }
 
 }
